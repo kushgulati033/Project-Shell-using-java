@@ -8,6 +8,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         String cwd = Path.of("").toAbsolutePath().toString();
         while (true) {
+
             System.out.print("$ ");
             String input = scanner.nextLine();
             if (input.equals("exit 0")) {
@@ -22,6 +23,7 @@ public class Main {
                     String path = getPath(arg);
                     if (path == null) {
                         System.out.printf("%s: not found%n", arg);
+
                     } else {
                         System.out.printf("%s is %s%n", arg, path);
                     }
@@ -57,4 +59,3 @@ public class Main {
         }
         return null;
     }
-}
