@@ -36,6 +36,9 @@ public class Main {
                         System.out.println(input + ": command not found");
                     }
                     break;
+                case "pwd":
+                    System.out.println(System.getProperty("user.dir"));
+                    break;
                 case "echo":
                     System.out.println(parameter);
                     break;
