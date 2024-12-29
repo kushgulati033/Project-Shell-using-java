@@ -15,7 +15,7 @@ public class Main {
                 if(input.substring(5).equals("type") || input.substring(5).equals("echo") || input.substring(5).equals("exit")){
                 System.out.println(input.substring(5)+" is a shell builtin");}
                 else{
-                    System.out.println(input + ": command not found");
+                    System.out.println(input + ": not found");
                 }
             } else {
                 System.out.println(input + ": command not found");
