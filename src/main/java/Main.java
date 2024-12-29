@@ -8,6 +8,7 @@ public class Main {
         String[] command;
         String[] paths = System.getenv("PATH").split(File.pathSeparator);
         while (true) {
+
             System.out.print("$ ");
             command = scanner.nextLine().split(" ");
             switch (command[0]) {
@@ -60,6 +61,7 @@ public class Main {
                         ProcessBuilder processBuilder = new ProcessBuilder();
                         for (String arg : command) {
                             processBuilder.command().add(arg);
+
                         }
                         Process process = processBuilder.start();
                         process.getInputStream().transferTo(System.out);
@@ -70,4 +72,3 @@ public class Main {
             }
         }
     }
-}
