@@ -22,7 +22,7 @@ public class Main {
                         System.out.println(String.join(" ", trimmed.substring(6,trimmed.length() - 1)));
                     }
                     else{
-                    System.out.println(String.join(" ", input.substring(5)));
+                    System.out.println(String.join(" ", trimmed.substring(5)));
                 }}
             } else if (input.startsWith("type ")) {
                 String arg = input.substring(5);
