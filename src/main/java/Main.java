@@ -30,7 +30,10 @@ public class Main {
                 System.out.println(cwd);
             } else if (input.startsWith("cd ")) {
                 String dir = input.substring(3);
-                if (!dir.startsWith("/")) {
+                if (dir.equals("~")) {
+                    dir = System.getenv("HOME"); // Resolving the user's home directory
+                }
+                else if (!dir.startsWith("/")) {
                     dir = cwd + "/" + dir;
                 }
                 if (Files.isDirectory(Path.of(dir))) {
