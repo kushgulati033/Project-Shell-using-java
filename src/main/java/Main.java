@@ -14,7 +14,17 @@ public class Main {
             if (input.equals("exit 0")) {
                 System.exit(0);
             } else if (input.startsWith("echo ")) {
-                System.out.println(input.substring(5));
+                if (input.length() > 1) {
+                    String trimmed = input.trim().replaceAll("\\s+", " ");
+                    if (input.endsWith("\"")) {
+                    System.out.println(String.join(" ", trimmed.substring(6, trimmed.length() - 1)));
+                    }
+                    else if (input.endsWith("'")) {
+                        System.out.println(String.join(" ", trimmed.substring(6,trimmed.length() - 1)));
+                    }
+                    else{
+                    System.out.println(String.join(" ", trimmed.substring(5)));
+                }}
             } else if (input.startsWith("type ")) {
                 String arg = input.substring(5);
                 if (commands.contains(arg)) {
